@@ -7,31 +7,37 @@ others:
 
 | Layer | File | Wraps |
 |-------|------|-------|
-| **Resolver** | `src/Resolver.{hpp,cpp}` | the `yt-dlp` subprocess — query in, `vector<Track>` out |
-| **Engine** | `src/Engine.{hpp,cpp}` | `libmpv` — owns the playlist, playback, volume, seek |
-| **UI** | `src/main.cpp` | FTXUI render loop — talks only to Engine + Resolver |
+| **Resolver** | `src/core/Resolver.{hpp,cpp}` | the `yt-dlp` subprocess — query in, `vector<Track>` out |
+| **Engine** | `src/core/Engine.{hpp,cpp}` | `libmpv` — owns the playlist, playback, volume, seek |
+| **UI** | `src/ui/main.cpp`, `src/ui/Thumbnail.{hpp,cpp}` | FTXUI render loop + Kitty thumbnails — talks only to Engine + Resolver |
+
+## Quick start
+
+```bash
+./run.sh
+```
+
+Configures (first run), builds, and launches. Personalize with your YouTube
+login:
+
+```bash
+JARVIS_COOKIES_BROWSER=chrome ./run.sh
+```
 
 ## Dependencies
 
 ```bash
-sudo apt install libmpv-dev yt-dlp cmake g++
+sudo apt install libmpv-dev yt-dlp cmake g++ curl
 ```
 
 FTXUI is fetched automatically by CMake (`FetchContent`) — no system install.
-`yt-dlp` must be on `PATH` at runtime.
+`yt-dlp`, `mpv`, and `curl` must be on `PATH` at runtime.
 
-## Build
+## Manual build
 
 ```bash
 cmake -B build
 cmake --build build -j
-```
-
-Produces `build/jarvis`.
-
-## Run
-
-```bash
 ./build/jarvis
 ```
 
