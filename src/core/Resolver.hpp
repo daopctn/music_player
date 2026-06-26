@@ -4,7 +4,7 @@
 #include <vector>
 #include <stdexcept>
 
-#include "Track.hpp"
+#include "core/Track.hpp"
 
 // The yt-dlp boundary. The ONLY component that knows yt-dlp exists.
 // In: a search string or URL. Out: a vector<Track>.

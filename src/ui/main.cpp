@@ -20,10 +20,10 @@
 #include <ftxui/component/screen_interactive.hpp>
 #include <ftxui/dom/elements.hpp>
 
-#include "Engine.hpp"
-#include "Resolver.hpp"
-#include "Thumbnail.hpp"
-#include "Track.hpp"
+#include "core/Engine.hpp"
+#include "core/Resolver.hpp"
+#include "ui/Thumbnail.hpp"
+#include "core/Track.hpp"
 
 using namespace ftxui;
 

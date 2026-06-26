@@ -22,10 +22,13 @@ FetchContent_MakeAvailable(ftxui)
 find_package(Threads REQUIRED)
 
 add_executable(jarvis
-  src/Resolver.cpp
-  src/Engine.cpp
-  src/Thumbnail.cpp
-  src/main.cpp)
+  src/core/Resolver.cpp
+  src/core/Engine.cpp
+  src/ui/Thumbnail.cpp
+  src/ui/main.cpp)
+
+# Includes are path-qualified from src/ (e.g. "core/Engine.hpp").
+target_include_directories(jarvis PRIVATE src)
 
 target_link_libraries(jarvis
   PRIVATE

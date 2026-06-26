@@ -1,10 +1,10 @@
-#include "Resolver.hpp"
+#include "core/Resolver.hpp"
 
 #include <cstdio>
 #include <cstdlib>
 #include <sstream>
 
-#include "util.hpp"
+#include "core/util.hpp"
 
 namespace {
 

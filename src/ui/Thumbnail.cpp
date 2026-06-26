@@ -1,4 +1,4 @@
-#include "Thumbnail.hpp"
+#include "ui/Thumbnail.hpp"
 
 #define STB_IMAGE_IMPLEMENTATION
 #define STBI_ONLY_JPEG
@@ -14,7 +14,7 @@
 #include <string>
 #include <thread>
 
-#include "util.hpp"
+#include "core/util.hpp"
 
 using namespace ftxui;
 

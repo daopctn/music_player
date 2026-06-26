@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-#include "Track.hpp"
+#include "core/Track.hpp"
 
 struct mpv_handle; // fwd-decl: keep <mpv/client.h> out of the public header
 
